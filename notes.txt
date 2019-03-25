@@ -1,2 +1,13 @@
-Tquant - Day 1
+Tquant | Day 1
+    - Run R in terminal using "source('filename.r')"
+    - c(): concatenated character vector function
+    - A <- matrix(1:x, nrow= rows, ncol = cols, byrow = )
+    - Factors: categorical variables (low, inter, high)
+    - list()
+    - Data frames: DS that contain vectors and factors (same len)
+    - Indexing works like Python with the exception of logical indices
+        - Logical indeices returns a logical vector
+        - weight[weight > 60]
+    - order(): Sorting function 
+    - aggregate()
     
