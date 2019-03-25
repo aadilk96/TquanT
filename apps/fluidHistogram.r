@@ -1,15 +1,20 @@
-# runApp('testCode.r') from the R terminal 
+## runApp('testCode.r') from the R terminal 
 
 library(shiny)
-## User interface with slider (input) and plot (output)
+## User interface
 ui <- fluidPage(
-    sliderInput("n", "Number of samples", 1, 100, 10),
-    plotOutput("hist"),
-    radioButtons("dist", "Distribution type:",
-               c("Normal" = "norm",
-                 "Uniform" = "unif",
-                 "Exponential" = "exp")),
-    plotOutput("distPlot")
+    titlePanel("Histogram Nation"),
+    sidebarPanel(
+        radioButtons("dist", "Distribution type:",
+                c("Normal" = "norm",
+                    "Uniform" = "unif",
+                    "Exponential" = "exp")),
+        plotOutput("distPlot"),
+        sliderInput("n", "Number of samples", 1, 100, 10)
+        ),
+    mainPanel(
+        plotOutput("hist")
+    )
 )
 ## Server function connecting input and output
 server <- function(input, output){
