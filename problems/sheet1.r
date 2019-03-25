@@ -23,7 +23,7 @@ print(dataFrame)
 
 # e
 rt <- rnorm(id, mean = 400, sd = sqrt(625))
-dataFrame$RT = rt
+dataFrame$ReactionTime = rt
 print(dataFrame)
 aggr <- aggregate(rt ~ condition, dataFrame, mean)
 print(aggr)
