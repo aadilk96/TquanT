@@ -1,32 +1,70 @@
-Tquant 
-| Day 1
-    - Run R in terminal using "source('filename.r')"
-    - c(): concatenated character vector function
-    - A <- matrix(1:x, nrow= rows, ncol = cols, byrow = )
-    - Factors: categorical variables (low, inter, high)
-    - list()
-    - Data frames: DS that contain vectors and factors (same len)
-    - Indexing works like Python with the exception of logical indices
-        - Logical indeices returns a logical vector
-        - weight[weight > 60]
-    - order(): Sorting function 
-    - aggregate()
-    
-| Day 2
-    - Copulas 
-        - Probability distrbution vs pdfs vs cdfs vs multivariate distrbution vs marginal distrbution
-        - Lebesgue-Stieltjes integral: Integrating prob. distrs. 
-            - Different way of writing the integral for the expected value E[x]
-        - Copula: A function that joins a multivariate distribution functions to its 1-D margins
-        - Used to describe the dependence between random variables 
-        - Parameters to copula function -> probability distrbutions 
-        - An n-copula is an n-variate distrbution function on [0,1]^n with univariate margins
-            uniformly distributed in [0,1]
-        - Proving a function is a copula 
-            - Find a suitable probablistic model whose distrbution functions concentrated
-                on [0,1]^n and has uniform marginals 
-        - Allow for study of the structure of stochastic dependency in a scale free manner,
-            independent of the specific marginal distrbution, i.e. seperation of dependency 
-            structure from the specific marginals 
-        - If all univariate margins are continuous, then the copula is unique 
-        
+                                  ||  Tquant  ||
+                                  
+| Day 1 
+    - R programming 
+        - Run R in terminal using "source('filename.r')
+        - c(): concatenated character vector function 
+        - A <- matrix(1:x, nrow= rows, ncol = cols, byrow = ) 
+        - Factors: categorical variables (low, inter, high) 
+        - list() 
+        - Data frames: DS that contain vectors and factors (same len) 
+        - Indexing works like Python with the exception of logical indices 
+            - Logical indeices returns a logical vector 
+            - weight[weight > 60] 
+        - order(): Sorting function  
+        - aggregate() 
+| Day 2 
+    - Copulas  
+        - Probability distrbution vs pdfs vs cdfs vs multivariate distrbution vs marginal distrbution 
+        - Lebesgue-Stieltjes integral: Integrating prob. distrs.  
+            - Different way of writing the integral for the expected value E[x] 
+        - Copula: A function that joins a multivariate distribution functions to its 1-D margins 
+        - Used to describe the dependence between random variables  
+        - Parameters to copula function -> probability distrbutions  
+        - An n-copula is an n-variate distrbution function on [0,1]^n with univariate margins 
+            uniformly distributed in [0,1] 
+        - Proving a function is a copula  
+            - Find a suitable probablistic model whose distrbution functions concentrated 
+                on [0,1]^n and has uniform marginals  
+        - Allow for study of the structure of stochastic dependency in a scale free manner, 
+            independent of the specific marginal distrbution, i.e. seperation of dependency  
+            structure from the specific marginals  
+        - If all univariate margins are continuous, then the copula is unique  
+        - Sklar's Theorem 
+            - Generate a pair of observations (u, v) from two distribiton functions 
+                (U, V) which copula is C. Using an inverse distribiton function, it is 
+                possible to extrapolate their joint distrbution function. 
+    - Statistical Learning 
+        - An Introduction to Statistical Learning (Book, free down. avail.) 
+        - Statistical Learning is mostly supervised learning 
+            - Regression Problem
+                - Y is quantitative
+            - Classification Problem
+                - Y takes values in a finite unordered set 
+        - Unsupervised Learning
+            - Not outcome variable 
+            - Alg. tries to find a pattern within a dataset 
+        - Pretty much ML 
+        - Parametric and Structured Models 
+            - Linear Models 
+                - We estimate the parameters by fitting the model to training data 
+                - Almost never correct, but serves as a good approx. of the uknown 
+                    true fucntion f(x)
+                - Quadratic models tend to be slightly better 
+            - Overfitting
+                - When the fitted model makes no errors on the training data  
+                - Model would not be able to make valid predictions on test data 
+                    - Due to having no error 
+                - Works well for training but not for test 
+            - Assesing model accuracy 
+                - Compute Mean Square Error in Training and Test sets 
+                    - Compare 
+            - Flexibility -> Number of Parameters (kinda)
+            - Typically as the flexibility of f increases, variance increases and 
+                its bias decreases
+            - *Bias *Variance 
+            - *Bayes Classifier
+            - K-Means clustering (KNN - K Nearest Neighbour)
+                - Low K could have higher risk of overfitting 
+                - High K could have a higher risk of underfitting 
+            
