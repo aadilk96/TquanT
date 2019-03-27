@@ -1,4 +1,4 @@
-                                  ||  Tquant  ||
+                                            ||  Tquant  ||
                                   
 | Day 1 
     - R programming 
@@ -31,8 +31,8 @@
             structure from the specific marginals  
         - If all univariate margins are continuous, then the copula is unique  
         - Sklar's Theorem 
-            - Generate a pair of observations (u, v) from two distribiton functions 
-                (U, V) which copula is C. Using an inverse distribiton function, it is 
+            - Generate a pair of observations (u, v) from two distrbution functions 
+                (U, V) which copula is C. Using an inverse distrbution function, it is 
                 possible to extrapolate their joint distrbution function. 
     - Statistical Learning 
         - An Introduction to Statistical Learning (Book, free down. avail.) 
@@ -67,4 +67,24 @@
             - K-Means clustering (KNN - K Nearest Neighbour)
                 - Low K could have higher risk of overfitting 
                 - High K could have a higher risk of underfitting 
-            
+| Day 3
+    - Ising Model
+        - Binary scored variables as a function of main and interaction effects 
+        - Model of ferromagnetism
+        - Used in psychology for network modelling and psychometrics 
+        - (sigma) -> set of discrete variables 
+            - Magnetic dipole moments of atomic spins 
+                -(sigma1): atom i spins upward, +1
+                -(sigma2): atom i spins downward -1
+            - Spins can be used to determine the energy of a system 
+                - Use the Hamiltonian function to calc. energy for (sigma)
+        - The dimensionality of a model refers to the number of neighbours each 
+            spin is connected too
+            - When d <= 2 an exact solution exists 
+                - Free energy  
+                - Spin-Spin correlation  
+            - When d > 2, this is no longer the case 
+                - Approximate it with a mean field 
+        - The Ising model can be used to model the joint distrbution of binary variables 
+            as a function of main effects and pairwise interactions
+                      
