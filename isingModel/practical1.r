@@ -36,20 +36,21 @@ bolztmannIsing <- function(x, mu, omega, beta){
     return (matr)
 }
 
-# ising <- function(mu, omega, beta){
-#     bolztmann <- function(x, b = 1){exp(-b*x)}
-#     n = length(mu)
-#     x <- matrixCreate(n)
-#     E  = apply(x, 1, hamiltonian2, mu=mu, omega=omega)
-#     B  = bolztmann(E, b= beta)
-#     P = B/sum(B)
+shorterIsing <- function(mu, omega, beta){
+    bolztmann <- function(x, b = 1){exp(-b*x)}
+    n = length(mu)
+    x <- matrixCreate(n)
+    E  = apply(x, 1, hamiltonian2, mu=mu, omega=omega)
+    B  = bolztmann(E, b= beta)
+    P = B/sum(B)
 
-#     y = cbind(x,E,B,P)
-#     colnames(y)[(n+1):ncol(y)] = c("Energy", "Bolztmann", "Probability")
-#     return (y)
-# }
+    y = cbind(x,E,B,P)
+    colnames(y)[(n+1):ncol(y)] = c("Energy", "Bolztmann", "Probability")
 
-main <- function(){
+    return (y)
+}
+
+main1 <- function(){
     x = c(1,1,-1)
     mu = c(0,0,0)
     omega = matrix(c(0,1,-1,1,0,0,-1,0,0),3,3)
@@ -64,7 +65,26 @@ main <- function(){
     print(bolztmannIsing(x, mu, omega, 1))
     # print(ising(mu, omega, 1))
 
+    print("End of Main1")
 }
 
+main2 <- function(){
+    omega = matrix(0,5,5)
+    mu = c(0,0,0,0,0)
+    beta = 1
 
-main()
+    base.model <- shorterIsing(mu, omega, beta)
+    print(base.model)
+
+    sum = 0
+    for (i in 1:32){
+        for (j in 1:5){
+            sum = sum + c(base.model[i, j])
+        }
+    }
+    print(sum)
+    print("End of Main2")
+}
+
+main1()
+main2()
