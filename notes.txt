@@ -1,4 +1,4 @@
-                                            ||  Tquant  ||
+                                                    ||  Tquant  ||
                                   
 | Day 1 
     - R programming 
@@ -13,6 +13,7 @@
             - weight[weight > 60] 
         - order(): Sorting function  
         - aggregate() 
+
 | Day 2 
     - Copulas  
         - Probability distrbution vs pdfs vs cdfs vs multivariate distrbution vs marginal distrbution 
@@ -67,6 +68,7 @@
             - K-Means clustering (KNN - K Nearest Neighbour)
                 - Low K could have higher risk of overfitting 
                 - High K could have a higher risk of underfitting 
+
 | Day 3
     - Ising Model
         - Binary scored variables as a function of main and interaction effects 
@@ -87,4 +89,35 @@
                 - Approximate it with a mean field 
         - The Ising model can be used to model the joint distrbution of binary variables 
             as a function of main effects and pairwise interactions
-                      
+        - The Psychological Ising model 
+            - Question: How do we explain the associations between observed variables 
+                - Common cause framework 
+            - Latent variable models => a common cause explanation 
+            - Statistical model -> Basically data reduction 
+            - Theoretical models -> Data-generating mechanism 
+            - Network models => mutualistic realtions between the observable variables
+            - IRT (Item Response Theory)
+                - Models associations between categorical observed variables as a function of a 
+                    continuous latent variable
+            - Latent variable models and network models are mathematically equivalent 
+                - Model fit does thus not say anything about the validity of the 
+                    underlying mechanism 
+            - Simulation and Estimation
+                - For small systems simulatin states is easy as we can calculate the prob. 
+                    distrbution for the entire system 
+                - When the system grows, the number of possible configurations grows and so 
+                    does the time to calculate the probs. 
+    - Statistical Learning
+        - In the case of a binary outcome, linear regression would not work 
+            - However, a logistic regression would work 
+        - *logit 
+        - Logistic Regression with more than two classes 
+            - There will be a linear function for each class 
+            - Multi-class logistical regression
+        - Discriminant Analysis 
+            - Model the distrbution of X in each of the classes individually and 
+                use Bayes theorem to obtain the conditional probabilities for the rest 
+            - Provides a low dimensional view of the data 
+            - More stable when n is small and the distrbution of x is normal
+                - In comparison to LR 
+        
