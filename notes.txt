@@ -114,10 +114,40 @@
         - Logistic Regression with more than two classes 
             - There will be a linear function for each class 
             - Multi-class logistical regression
+            - Sigmoid = Logistic 
         - Discriminant Analysis 
             - Model the distrbution of X in each of the classes individually and 
                 use Bayes theorem to obtain the conditional probabilities for the rest 
             - Provides a low dimensional view of the data 
             - More stable when n is small and the distrbution of x is normal
                 - In comparison to LR 
-        
+            - Types of Erros 
+                - False positive and negative ratess
+                - ROC curve plots both simulatneously 
+                    - Area under curve is great => better
+            - Naive Bayes 
+                - Assumes features are independent in each class. 
+                    - Useful when p is large, and so multivariate methods 
+                        like QDA and even LDA break down 
+                - Often produces good results for classification 
+        - Logistic regression uses the conditional likelihood based on Pr(Y|X)
+        - LDA uses the full likelihood (generative learning)
+        - Resampling methods  
+            - Cross-validation 
+                - Bias: Systematic Error, Variance: Differences in predictions 
+                - Drawbacks of validation methods
+                - May tend to overestimate the test error 
+                    for the model fit on the entire data set 
+                - K-fold Cross-validation  
+                    - Widely used approach for estimating test error 
+                    - Divide data into K roughly equal sized parts 
+                    - Seeting K = n yields n = fold or LOOCV (Leave one out)
+            - The Bootstrap 
+                - Flexible and powerful statistical tool that can be used to quantify the
+                    uncertainty associated with a given estimator or statistical learning method
+                - Risk -> Variance 
+                - Allows us to use a compute to mimix the process of obtaining new 
+                    data sets, so that we can estimate the variability of our estimate 
+                    without generating additional samples
+                - Need a sample to begin with 
+                - Uses sub-sampling 
